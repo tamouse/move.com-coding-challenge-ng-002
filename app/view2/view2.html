@@ -2,13 +2,13 @@
 
 <div class="row">
   <div class="col-md-9">
-    <p>current image: {{ current_photo(0).description }}</p>
-  <img ng-src="{{ current_photo(0).href }}" alt="{{ current_photo(0).description }}">
+    <p>current image: {{ current_photo.description }}</p>
+  <img ng-src="{{ current_photo.href }}" alt="[image] {{ current_photo.description }}">
   </div>
   <div class="col-md-3">
     <p>photo gallery</p>
     <span ng-repeat="photo in property.photos" class="thumbnail">
-      <img ng-src="{{ photo.href }}" alt="{{ photo.description }}">
+      <img ng-src="{{ photo.href }}" alt="[image] {{ photo.description }}" title="{{ photo.description }}">
     </span>
   </div>
 </div>
