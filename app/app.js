@@ -53,12 +53,11 @@ angular.module('myApp', [
     {"href": "images/ld32d4d44-c35s.jpg","description": "An unusually long and complex description text. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."}
   ]};
 
-  var set_current_photo = function (index) {
+  $scope.set_current_photo = function (index) {
     var photo = $scope.property.photos[index];
-    return {"href": photo.href.replace(/.\.jpg$/,'o.jpg'),"description": photo.description};
+    $scope.current_photo = {"href": photo.href.replace(/.\.jpg$/,'o.jpg'),"description": photo.description};
   };
 
-  $scope.current_photo = set_current_photo(0);
-
+  $scope.set_current_photo(0);
 })
 ;
