@@ -1,11 +1,15 @@
-<div class="page-header"><h2>Film Strip Gallery</h2></div>
+<div class="page-header"><h2>Film Strip Gallery <small> Property: {{ property.property_id }}</small></h2></div>
 <div class="jumbotron">
   <!-- main image -->
-  <p>current image</p>
+  <p>current image: {{ current_photo(0).description }}</p>
+  <img ng-src="{{ current_photo(0).href }}" alt="{{ current_photo(0).description }}">
 </div>
 <div class="row">
   <div class="col-md-12">
     <!-- film strip -->
     <p>film strip</p>
+    <span ng-repeat="photo in property.photos" class="thumbnail">
+      <img ng-src="{{ photo.href }}" alt="{{ photo.description }}">
+    </span>
   </div>
 </div>

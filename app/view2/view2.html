@@ -1,10 +1,14 @@
-<div class="page-header"><h2>Side-by-Side Gallery</h2></div>
+<div class="page-header"><h2>Side-by-Side Gallery <small> Property: {{ property.property_id }}</small></h2></div>
 
 <div class="row">
-  <div class="col-md-6">
-    <p>main image</p>
+  <div class="col-md-9">
+    <p>current image: {{ current_photo(0).description }}</p>
+  <img ng-src="{{ current_photo(0).href }}" alt="{{ current_photo(0).description }}">
   </div>
-  <div class="col-md-6">
+  <div class="col-md-3">
     <p>photo gallery</p>
+    <span ng-repeat="photo in property.photos" class="thumbnail">
+      <img ng-src="{{ photo.href }}" alt="{{ photo.description }}">
+    </span>
   </div>
 </div>
