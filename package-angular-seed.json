@@ -1,9 +1,9 @@
 {
-  "name": "photo-gallery",
+  "name": "angular-seed",
   "private": true,
   "version": "0.0.0",
-  "description": "A photo gallery coding sample done in AngularJS",
-  "repository": "https://github.com/tamouse/move.com-coding-challenge-ng-002",
+  "description": "A starter project for AngularJS",
+  "repository": "https://github.com/angular/angular-seed",
   "license": "MIT",
   "devDependencies": {
     "karma": "~0.10",
