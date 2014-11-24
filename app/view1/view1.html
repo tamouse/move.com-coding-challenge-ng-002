@@ -8,7 +8,7 @@
   <div class="col-md-12">
     <!-- film strip -->
     <p>film strip</p>
-    <span ng-repeat="photo in property.photos" class="thumbnail">
+    <span ng-repeat="photo in property.photos">
       <img ng-src="{{ photo.href }}" alt="[image] {{ photo.description }}" title="{{ photo.description }}" ng-click="set_current_photo($index)">
     </span>
   </div>

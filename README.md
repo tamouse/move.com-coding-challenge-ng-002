@@ -12,14 +12,30 @@ I then followed the instructions in that old readme.
 
 At this point, all tests pass, the server works, yay!
 
-## Test Data
-
-Move.com gave me original test data in a JSON object. This data is intended to be returned from an AJAX API service,
-so I'll just implement that as a static service in the app, `propertyPhotosService`.
-
 ## Two Views
 
 In the [original][original-implementation], I made two views for the gallery, one in a film-strip format and one in a side-by-side format. I'll do them here as well. Since the seed starts by giving me two views, I'm already ahead of the game!
+
+The views in angular set up the routes they respond to and the controllers that will drive them. Sort of backwards from my Rails experience, but it certainly makes sense here.
+
+## One Controller
+
+As the controller doesn't care in the least how the views are structured, I'm using the same controller, `GalleryController` to drive both views.
+
+## Test Data
+
+Move.com gave me original test data in a JSON object. This data is intended to be returned from an AJAX API service,
+but it is statically assigned in the `GalleryController`.
+
+## Flipping the Image
+
+Each view has the main image, and then a set of thumbnails. Clicking on a thumbnail changes the current large image.
+
+Using angular, this was super easy. Data binding makes the template easily updateable on the fly without doing much of anything. Making each thumbnail respond to a click was also super easy, calling a method in the `GalleryController` object to set the current photo accordingly.
+
+## Conclusions
+
+This went a *whole* lot faster than I expected, even though I had a couple of false starts.
 
 *****
 
